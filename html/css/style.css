@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(83, 83, 83, 0.63);
+}
+
+.Werbung {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: rgb(255, 255, 255);
+  background:rgba(0, 251, 255, 0.8);
+  border: double 2px rgba(255, 255, 255, 0.8);
+  border-top-left-radius: 200px 50%;
+  border-bottom-right-radius: 200px 50%;;
+  height: 5%;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.CardsBus {
+  height: 300px;
+  width: 500px;
+  left: 10px;
+  top: 40%;
+  position: absolute;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#CardsBus button {
+  border-radius: 10px;
+  border: double 2px grey;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skewX(-20deg);
+  background: rgb(8,0,143);
+  background: linear-gradient(90deg, rgba(8,0,143,1) 0%, rgba(0,91,255,1) 50%, rgba(0,194,255,1) 100%);
+}
+
+#CardsBus button:hover {
+  border: double 4px grey;
+  background: rgb(53, 48, 139);
+  background: linear-gradient(90deg, rgb(56, 51, 141) 0%, rgb(102, 156, 255) 50%, rgb(102, 219, 255) 100%);
+}
+
+.cardnonactive {
+  animation-name: cardnonactive;
+  animation-duration: 1s;
+  color: white;
+  cursor: pointer;
+  height: 100px;
+  width: 300px;
+}
+
+@keyframes cardnonactive {
+  from {
+    width: 400px;
+  }
+  to {
+    width: 300px;
+  }
+}
+
+@keyframes cardactive {
+  from {
+    width: 300px;
+  }
+  to {
+    width: 400px;
+  }
+}
+
+.cardactive {
+  color: white;
+  animation-name: cardactive;
+  animation-duration: 1s; 
+  height: 100px;
+  width: 400px;
+}
+
+.Sitenonactive {
+  display: none;
+}
+
+.Routen {
+  display: flex;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  flex-wrap: wrap;
+  width: 650px;
+  height: 650px;
+  gap: 25px;
+}
+
+.RoutenScroll {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.RoutenScroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.RoutenScroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(42, 184, 187);
+  background: linear-gradient(0deg, rgb(33, 196, 199) 0%, rgb(28, 32, 255)100%);
+}
+
+.RoutenScroll::-webkit-scrollbar-thumb {
+  background: rgb(121, 169, 170);
+  background: linear-gradient(0deg, rgb(105, 169, 170) 0%, rgb(255, 255, 255) 5%, rgb(105, 169, 170) 100%);
+  border-radius: 10px;
+}
+
+.RoutenScroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(103, 187, 189);
+  background: linear-gradient(0deg, rgb(106, 187, 189) 0%,rgb(118, 120, 253)100%);
+}
+
+.Routen button {
+  cursor: pointer;
+  color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: ridge 3px white;
+  background: rgb(42, 184, 187);
+  background: linear-gradient(0deg, rgb(33, 196, 199) 0%, rgb(28, 32, 255)100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10;
+}
+
+.Routen button:hover {
+  cursor: pointer;
+  color: black;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: ridge 5px white;
+  background: rgb(110, 192, 194);
+  background: linear-gradient(0deg, rgb(107, 196, 197) 0%, rgb(91, 94, 255)100%);
+}
+
+.Name {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.Stops {
+  width: 100%;
+  height: 100px;
+  margin-left: 20px;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: top;
+  justify-content: left;
+}
+
+.Zahlung {
+  width: 100%;
+  height: 100px;
+  margin-left: 20px;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: top;
+  justify-content: left;
+}
+
+.Ranglisten {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 50%;
+  height: 70%;
+  margin-left: 25%;
+  margin-right: 25%;
+  top: 10%;
+  background: rgba(0, 8, 255, 0.75);
+  background: linear-gradient(180deg, rgba(0, 8, 255, 0.75) 0%, rgba(0, 255, 238, 0.75) 100%);
+  border-radius: 25px;
+  border: double 5px white;
+}
+
+.Header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 4%;
+  font-size: 25px;
+}
+
+.Ranglisteneintrag {
+  display: flex;
+  flex-wrap: wrap;
+  Justify-content: center;
+  align-content: center;
+  height: 3%;
+  width: 100%;
+  border-top: double 1px rgba(255, 255, 255, 0.25);
+  border-bottom: double 1px rgba(255, 255, 255, 0.25);
+  border-right: double 1px rgba(255, 255, 255, 0.25);
+  border-left: double 1px rgba(255, 255, 255, 0.25);
+}
+
+.Fahrten::-webkit-scrollbar {
+  display: none;
+}
+
+.Fahrten {
+  margin-left: 10px;
+  height: 100%;
+  width: 49%;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  border-right: double 5px white;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+#FahrtenPlace {
+  width: 33%;
+}
+
+#FahrtenName {
+  width: 33%;
+  gap: 1px;
+}
+
+#FahrtenNumber {
+  width: 33%;
+}
+
+.Passagiere::-webkit-scrollbar {
+  display: none;
+}
+
+.Passagiere {
+  height: 100%;
+  width: 49%;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+#PassagierePlace {
+  width: 33%;
+}
+
+#PassagiereName {
+  width: 33%;
+  gap: 1px;
+}
+
+#PassagiereNumber {
+  width: 33%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.CardsElek {
+  height: 300px;
+  width: 500px;
+  left: 10px;
+  top: 40%;
+  position: absolute;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#CardsElek button {
+  border-top-left-radius: 150px 70%;
+  border: double 2px rgb(255, 255, 255);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skewX(-20deg);
+  background: rgb(249,255,0);
+  background: linear-gradient(90deg, rgba(249,255,0,1) 0%, rgba(255,98,0,1) 100%);
+}
+
+#CardsElek button:hover {
+  border: double 4px rgb(255, 255, 255);
+  background: rgb(253, 255, 116);
+  background: linear-gradient(90deg, rgb(253, 255, 125) 0%,rgb(255, 181, 135)100%);
+}
+
+.ElektrikerRanglisten {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 30%;
+  height: 70%;
+  margin-left: 35%;
+  margin-right: 35%;
+  top: 10%;
+  background: rgba(251, 255, 0, 0.671);
+  background: linear-gradient(180deg, rgba(247, 250, 55, 0.671) 0%, rgba(115, 255, 81, 0.671) 100%);
+  border-radius: 25px;
+  border: double 5px white;
+}
+
+.ElektrikerHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 4%;
+  font-size: 25px;
+}
+
+.ElektrikerRanglisteneintrag {
+  display: flex;
+  flex-wrap: wrap;
+  Justify-content: center;
+  align-content: center;
+  height: 3%;
+  width: 100%;
+  border-top: double 1px rgba(255, 255, 255, 0.25);
+  border-bottom: double 1px rgba(255, 255, 255, 0.25);
+  border-right: double 1px rgba(255, 255, 255, 0.25);
+  border-left: double 1px rgba(255, 255, 255, 0.25);
+}
+
+.Repariert::-webkit-scrollbar {
+  display: none;
+}
+
+.Repariert {
+  margin-left: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(71, 71, 71);
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+#RepariertPlace {
+  width: 33%;
+}
+
+#RepariertName {
+  width: 33%;
+  gap: 1px;
+}
+
+#RepariertNumber {
+  width: 33%;
+}
+
+
+#ButtonElektrikerStartJob {
+  transform: skewX(-30deg);
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 500px;
+  height: 200px;
+  border-radius: 20px;
+  font-size: 50px;
+  border: double 5px rgb(255, 255, 255);
+}
+
+.ElektrikerStartButton {
+  color: white;
+  border: double 5px rgb(255, 255, 255);
+  background: rgb(149,251,63);
+  background: radial-gradient(circle, rgba(149,251,63,1) 0%, rgba(245,255,0,1) 100%);
+}
+
+.ElektrikerStartButton:hover {
+  color: grey;
+  background: rgb(203, 255, 161);
+  background: radial-gradient(circle, rgb(206, 255, 166) 0%, rgb(251, 255, 126) 100%);
+}
+
+.ElektrikerStopButton {
+  border: double 5px rgb(0, 0, 0);
+  color: white;
+  background: rgb(255,158,0);
+  background: radial-gradient(circle, rgba(255,158,0,1) 0%, rgba(255,0,0,1) 100%);
+}
+
+.ElektrikerStopButton:hover {
+  color: grey;
+  background: rgb(255, 205, 124);
+  background: radial-gradient(circle, rgb(255, 202, 117) 0%,rgb(255, 131, 131)100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.CardsCargo {
+  height: 300px;
+  width: 500px;
+  left: 10px;
+  top: 40%;
+  position: absolute;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#CardsCargo button {
+  border-top-left-radius: 150px 70%;
+  border: double 2px rgb(255, 255, 255);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skewX(-20deg);
+  background: rgb(52,52,52);
+  background: linear-gradient(90deg, rgba(52,52,52,1) 0%, rgba(149,60,0,1) 100%);
+  
+}
+
+#CardsCargo button:hover {
+  border: double 4px rgb(255, 255, 255);
+  background: rgb(138, 138, 138);
+  background: linear-gradient(90deg, rgb(136, 136, 136) 0%, rgb(136, 96, 69) 100%);
+  
+}
+
+.CargoRanglisten {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 30%;
+  height: 70%;
+  margin-left: 35%;
+  margin-right: 35%;
+  top: 10%;
+  background: rgb(101,101,101);
+  background: linear-gradient(0deg, rgba(101,101,101,1) 0%, rgba(149,60,0,1) 100%);
+  border-radius: 25px;
+  border: double 5px white;
+}
+
+.CargoHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  width: 100%;
+  height: 4%;
+  font-size: 25px;
+}
+
+.CargoRanglisteneintrag {
+  display: flex;
+  flex-wrap: wrap;
+  Justify-content: center;
+  align-content: center;
+  height: 3%;
+  width: 100%;
+  color: white;
+  border-top: double 1px rgba(255, 255, 255, 0.5);
+  border-bottom: double 1px rgba(255, 255, 255, 0.5);
+  border-right: double 1px rgba(255, 255, 255, 0.5);
+  border-left: double 1px rgba(255, 255, 255, 0.5);
+}
+
+.Container::-webkit-scrollbar {
+  display: none;
+}
+
+.Container {
+  margin-left: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(71, 71, 71);
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+#ContainerPlace {
+  width: 33%;
+}
+
+#ContainerName {
+  width: 33%;
+  gap: 1px;
+}
+
+#ContainerNumber {
+  width: 33%;
+}
+
+.CargoJobsoffers {
+  display: flex;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  flex-wrap: wrap;
+  width: 650px;
+  height: 650px;
+  gap: 25px;
+}
+
+.CargoJobsoffersScroll {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.CargoJobsoffersScroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.CargoJobsoffersScroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(65, 65, 65, 0.5);
+}
+
+.CargoJobsoffersScroll::-webkit-scrollbar-thumb {
+  background-color: rgba(149,60,0,1);
+  border-radius: 10px;
+}
+
+.CargoJobsoffersScroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(141, 99, 71);
+}
+
+.CargoJobsoffers button {
+  cursor: pointer;
+  color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: ridge 3px white;
+  background: rgb(101,101,101);
+  background: linear-gradient(0deg, rgba(101,101,101,1) 0%, rgba(149,60,0,1) 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10;
+}
+
+.CargoJobsoffers button:hover {
+  cursor: pointer;
+  color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: ridge 5px white;
+  background: rgb(168, 168, 168);
+  background: linear-gradient(0deg, rgb(179, 179, 179) 0%, rgb(148, 101, 70) 100%);
+}
+
+.CargoJobsoffersName {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.CargoJobsoffersWahre {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.CargoJobsoffersZahlung {
+  width: 100%;
+  height: 100px;
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+

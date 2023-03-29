@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="container" class="container">  
+      <div class="Busfahrer"> 
+        <div class="CardsBus" id="CardsBus">
+          <button onclick="ButtonClicked(1, 'Bus')" class="cardactive" id="ButtonBusRouten">
+            Routen
+          </button>
+          <button onclick="ButtonClicked(2, 'Bus')" class="cardnonactive" id="ButtonBusRangliste">
+            Rangliste
+          </button>
+        </div>
+        <div class="MainSites" id="MainSites">
+          <div id="SiteRouten" class=""> 
+            <div id="Routen" class="Routen">
+            </div>
+          </div>
+          <div id="SiteRangliste" class="Sitenonactive"> 
+            <div class="Ranglisten">
+              <div class="Fahrten">
+                <div id="FahrtenPlace">
+                  <div class="Header">Platz</div>
+                </div>
+                <div id="FahrtenName">
+                  <div class="Header">Name</div>
+                </div>
+                <div id="FahrtenNumber">
+                  <div class="Header">Fahrten</div>
+                </div>
+              </div>
+              <div class="Passagiere">
+                <div id="PassagierePlace">
+                  <div class="Header">Platzt</div>
+                </div>
+                <div id="PassagiereName">
+                  <div class="Header">Name</div>
+                </div>
+                <div id="PassagiereNumber">
+                  <div class="Header">Passagiere</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Elektriker">
+        <div class="CardsElek" id="CardsElek">
+          <button onclick="ButtonClicked(1, 'Elektriker')" class="cardactive" id="ButtonElektrikerHauptmenu">
+            Hauptmenu
+          </button>
+          <button onclick="ButtonClicked(2, 'Elektriker')" class="cardnonactive" id="ButtonElektrikerRangliste">
+            Rangliste
+          </button>
+        </div>
+        <div class="MainSites" id="MainSites">
+          <div id="SiteElektrikerHauptmenu" class="">
+            <div class="StartElektrikerJob" id="StartElektrikerJob">
+              <button onclick="ElektrikerStartButtonClicked()" class="ElektrikerStartButton" id="ButtonElektrikerStartJob">Start</button>
+            </div>
+            <div class="ElektrikerStats" id="ElektrikerStats">
+              
+            </div>
+          </div>
+          <div id="SiteElektrikerRangliste" class="Sitenonactive">
+            <div class="ElektrikerRanglisten">
+              <div class="Repariert">
+                <div id="RepariertPlace">
+                  <div class="ElektrikerHeader">Platz</div>
+                </div>
+                <div id="RepariertName">
+                  <div class="ElektrikerHeader">Name</div>
+                </div>
+                <div id="RepariertNumber">
+                  <div class="ElektrikerHeader">Repariert</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Cargo">
+        <div class="CardsCargo" id="CardsCargo">
+          <button onclick="ButtonClicked(1, 'Cargo')" class="cardactive" id="ButtonCargoHauptmenu">Hauptmenu</button>
+          <button onclick="ButtonClicked(2, 'Cargo')" class="cardnonactive" id="ButtonCargoRangliste">Rangliste</button>
+        </div>
+        <div class="MainSites" id="MainSites">
+          <div id="SiteCargoHauptmenu" class=""> 
+            <div id="CargoJobsoffers" class="CargoJobsoffers"></div>
+          </div>
+          <div id="SiteCargoRangliste" class="Sitenonactive">
+            <div class="CargoRanglisten">
+              <div class="Container">
+                <div id="ContainerPlace">
+                  <div class="CargoHeader">Platz</div>
+                </div>
+                <div id="ContainerName">
+                  <div class="CargoHeader">Name</div>
+                </div>
+                <div id="ContainerNumber">
+                  <div class="CargoHeader">Container</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Werbung" class="Werbung">
+        Mocko Development
+      </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+    <script>  
+      function ButtonClicked(switcher, job) {
+        //Buttons
+        if (switcher == 1) {
+          if (job == "Bus") {
+            var element = document.getElementById("ButtonBusRangliste");
+            element.classList.add("cardnonactive");
+            element.classList.remove("cardactive");
+            var element2 = document.getElementById("ButtonBusRouten")
+            element2.classList.add("cardactive");
+            element2.classList.remove("cardnonactive");
+          }
+          if (job == "Elektriker") {
+            var element = document.getElementById("ButtonElektrikerRangliste");
+            element.classList.add("cardnonactive");
+            element.classList.remove("cardactive");
+            var element2 = document.getElementById("ButtonElektrikerHauptmenu")
+            element2.classList.add("cardactive");
+            element2.classList.remove("cardnonactive");
+          }
+          if (job == "Cargo") {
+            var element = document.getElementById("ButtonCargoRangliste");
+            element.classList.add("cardnonactive");
+            element.classList.remove("cardactive");
+            var element2 = document.getElementById("ButtonCargoHauptmenu")
+            element2.classList.add("cardactive");
+            element2.classList.remove("cardnonactive");
+          }
+        } 
+        if (switcher == 2) {
+          if (job == "Bus") {
+            var element = document.getElementById("ButtonBusRouten");
+            element.classList.add("cardnonactive");
+            element.classList.remove("cardactive");
+            var element2 = document.getElementById("ButtonBusRangliste")
+            element2.classList.add("cardactive");
+            element2.classList.remove("cardnonactive");
+          }
+          if (job == "Elektriker") {
+            var element = document.getElementById("ButtonElektrikerHauptmenu");
+            element.classList.add("cardnonactive");
+            element.classList.remove("cardactive");
+            var element2 = document.getElementById("ButtonElektrikerRangliste")
+            element2.classList.add("cardactive");
+            element2.classList.remove("cardnonactive");
+          }
+          if (job == "Cargo") {
+            var element = document.getElementById("ButtonCargoHauptmenu");
+            element.classList.add("cardnonactive");
+            element.classList.remove("cardactive");
+            var element2 = document.getElementById("ButtonCargoRangliste")
+            element2.classList.add("cardactive");
+            element2.classList.remove("cardnonactive");
+          }
+        } 
+        //Sites
+        if (switcher == 1) {
+          if (job == "Bus") {
+            var Site = document.getElementById("SiteRangliste");
+            Site.classList.add("Sitenonactive");
+            var Site2 = document.getElementById("SiteRouten");
+            Site2.classList.remove("Sitenonactive");
+          }
+          if (job == "Elektriker") {
+            var Site = document.getElementById("SiteElektrikerRangliste");
+            Site.classList.add("Sitenonactive");
+            var Site2 = document.getElementById("SiteElektrikerHauptmenu");
+            Site2.classList.remove("Sitenonactive");
+          }
+          if (job == "Cargo") {
+            var Site = document.getElementById("SiteCargoRangliste");
+            Site.classList.add("Sitenonactive");
+            var Site2 = document.getElementById("SiteCargoHauptmenu");
+            Site2.classList.remove("Sitenonactive");
+          }
+        }
+        if (switcher == 2) {
+          if (job == "Bus") {
+            var Site = document.getElementById("SiteRouten");
+            Site.classList.add("Sitenonactive");
+            var Site2 = document.getElementById("SiteRangliste");
+            Site2.classList.remove("Sitenonactive");
+          }
+          if (job == "Elektriker") {
+            var Site = document.getElementById("SiteElektrikerHauptmenu");
+            Site.classList.add("Sitenonactive");
+            var Site2 = document.getElementById("SiteElektrikerRangliste");
+            Site2.classList.remove("Sitenonactive");
+          }
+          if (job == "Cargo") {
+            var Site = document.getElementById("SiteCargoHauptmenu");
+            Site.classList.add("Sitenonactive");
+            var Site2 = document.getElementById("SiteCargoRangliste");
+            Site2.classList.remove("Sitenonactive");
+          }
+        }
+      }
+
+      function RouteButtonClicked(route) {
+        $.post("https://Mockos_Jobs/startBus", JSON.stringify({
+          number:  route
+        }));
+        return
+      }
+      
+      var injobelektriker = false;
+      
+      function ElektrikerStartButtonClicked() {
+        var element = document.getElementById("ButtonElektrikerStartJob");
+        if (injobelektriker == false) {
+          injobelektriker = true
+          element.innerHTML = "Stop";
+          element.classList.add("ElektrikerStopButton");
+          element.classList.remove("ElektrikerStartButton");
+        } else {
+          injobelektriker = false;
+          element.innerHTML = "Start";
+          element.classList.remove("ElektrikerStopButton");
+          element.classList.add("ElektrikerStartButton");
+        }
+        $.post("https://Mockos_Jobs/ElektrikerStart", JSON.stringify({}));
+        return
+      }
+
+      function CargoJobOfferButtonClicked(Container) {
+        $.post("https://Mockos_Jobs/startCargo", JSON.stringify({
+          number:  Container
+        }));
+        return
+      }
+      </script>
+  </body>
+</html>
